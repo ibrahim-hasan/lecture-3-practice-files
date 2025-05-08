@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <p id="">Test</p>
+    <form action="#">
+        <label for="customer_name">Name</label>
+        <input id="customer_name" type="text" name="full_name" placeholder="Enter your name">
+        <br><br>
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Enter your password">
+        <br><br>
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" placeholder="Enter your email">
+        <br><br>
+        <label>Age</label>
+        <input type="number" name="age" placeholder="Enter your age">
+        <br><br>
+        <label>Info</label>
+        <textarea rows="5"></textarea>
+        <hr>
+        <label>
+            <input type="checkbox" id="concent"> I approve all of these terms and conditions.
+        </label>
+        <br>
+        <br>
+        <label for="color">Favorite Color</label><br>
+        <label>
+            <input type="checkbox" name="colors[]" id="red" value="red"> Red
+        </label>
+        <label>
+            <input type="checkbox" name="colors[]" id="blue" value="blue" checked> Blue
+        </label>
+        <label>
+            <input type="checkbox" name="colors[]" id="green" value="green"> Green
+        </label>
+        <hr>
+        <label>Countries</label>
+        <select name="country" id="country" multiple>
+            <option value="">Enter your home country</option>
+            <option value="syria" selected>Syria</option>
+            <option value="turkey">Turkey</option>
+            <option value="palastine" selected>Palastine</option>
+        </select>
+    </form>
+</body>
+</html>
+
+
+<!-- name = 'Ibrahim' -->
+<!-- color = 'red' -->
+<!-- user = ['email' => 'example@example.com', 'password' => 'myname'] -->
