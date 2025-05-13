@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Selectors Practice</title>
+
+    <!-- 
+        Task:
+        1. Add a <style> block below.
+        2. Apply the following selectors and styles:
+            - Universal selector *: Set margin and padding to 0, and font-family to Arial.
+            - h1, p: Set the same text color (e.g., darkslategray).
+            - p span: Make the span text red.
+            - div > p: Make direct child paragraphs bold and increase font size.
+            - a:hover: Change the link color on hover and remove underline.
+            - div.box p:first-child: Give the first paragraph in .box a background color.
+            - .box span:last-child: Underline the last span inside .box.
+    -->
+
+    <link rel="stylesheet" href="advanced-selectors-practice.css">
+</head>
+
+<body>
+
+    <section class="box container">
+        <h1>Welcome to <span>My Page</span></h1>
+        <p>This is a <span>highlighted</span> paragraph that includes a <span>colored</span> word.</p>
+
+        <div class="box highlight">
+            <p>This is the <span>first</span> paragraph inside the box.</p>
+            <p>This is the <span>second</span> paragraph inside the box.</p>
+            <p>This is the <span>third</span> paragraph inside <span>the</span> box.</p>
+        </div>
+
+        <div class="footer">
+            <p>Visit our <a href="#">Help Center</a> for more information.</p>
+        </div>
+    </section>
+
+</body>
+
+</html>

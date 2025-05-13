@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, p {
+    color: darkslategray;
+}
+
+p span {
+    color: red;
+}
+
+div > p {
+    font-weight: bold;
+}
+
+a:hover {
+    color: red;
+    text-decoration: none;
+}
+
+div.box p:first-child {
+    background-color: yellowgreen
+}
+
+.box span:first-child {
+    text-decoration: underline;
+}
+
+ul {
+    margin-top: 30px;
+    padding-left: 50px;
+    list-style: disc;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    text-align: center;
+}
+
+ul li {
+    list-style: none;
+    padding: 10px;
+    background-color: #eee;
+    border: 1px solid black;
+    border-bottom: none;
+}
+
+ul li:last-child {
+    border-bottom: 1px solid black;
+}
