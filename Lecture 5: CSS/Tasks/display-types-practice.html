@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Display Types Practice</title>
+
+    <!-- 
+        Instructions:
+        1. Assign different layout behaviors to each group of items.
+        2. Ensure one group stacks vertically and takes full width.
+        3. Let another group flow inline like text.
+        4. Apply box model spacing and a visual outline.
+        5. Add a media condition to observe layout shift.
+    -->
+
+    <style>
+        .demo-container {
+            margin-bottom: 40px;
+        }
+
+        .demo-item {
+            padding: 10px;
+            margin: 5px;
+            background-color: #ccc;
+            border: 1px solid #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Display Types Practice</h1>
+
+    <div class="demo-container">
+        <h2>Block Items</h2>
+        <div class="demo-item block">Block 1</div>
+        <div class="demo-item block">Block 2</div>
+    </div>
+
+    <div class="demo-container">
+        <h2>Inline Items</h2>
+        <span class="demo-item inline">Inline 1</span>
+        <span class="demo-item inline">Inline 2</span>
+    </div>
+
+    <div class="demo-container">
+        <h2>Inline-block Items</h2>
+        <span class="demo-item inline-block">Inline-block 1</span>
+        <span class="demo-item inline-block">Inline-block 2</span>
+    </div>
+
+</body>
+
+</html>
