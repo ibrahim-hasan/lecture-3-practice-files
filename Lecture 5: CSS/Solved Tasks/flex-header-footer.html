@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox Header + Footer Practice</title>
+
+    <!-- 
+        Instructions:
+        1. Build a layout with a header, main content area, and footer.
+        2. Use Flexbox to center content inside header and footer.
+        3. Apply spacing and background colors for clarity.
+        4. Keep consistent spacing around all sections.
+        5. Add styles that show the visual structure of the page.
+    -->
+
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header,
+        footer {
+            background-color: #eee;
+            padding: 30px;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+        }
+
+        main {
+            padding: 40px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 40px
+        }
+
+        .form-row {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .form-input {
+            flex-grow: 1;
+        }
+
+        .form-input .input-label {
+            display: block;
+        }
+
+        .input-label {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .input {
+            height: 30px;
+            width: 100%;
+            min-width: 225px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+        }
+
+        .input:focus-visible {
+            outline-color: red;
+            outline-width: 2px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Page Header</h1>
+    </header>
+
+    <main>
+        <p>This is the main content section. Add whatever you'd like here.</p>
+        <form action="#" method="post">
+            <div class="form-row">
+                <div class="form-input">
+                    <label class="input-label" for="first-name">First Name</label>
+                    <input class="input" type="text" id="first-name" name="first_name" placeholder="Enter your first name">
+                </div>
+                <div class="form-input">
+                    <label class="input-label" for="last-name">Last Name</label>
+                    <input class="input" type="text" id="last-name" name="last_name" placeholder="Enter your last name">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-input">
+                    <label class="input-label" for="email">Email</label>
+                    <input class="input" type="email" id="email" name="email" placeholder="Enter your email">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-input">
+                    <label class="input-label" for="password">Password</label>
+                    <input class="input" type="password" id="password" name="password" placeholder="Enter your password">
+                </div>
+                <div class="form-input">
+                    <label class="input-label" for="password-confirmation">Password Confirmation</label>
+                    <input class="input" type="password" id="password-confirmation" name="confirmation" placeholder="Re-enter your password">
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>Page Footer</p>
+    </footer>
+
+</body>
+
+</html>
