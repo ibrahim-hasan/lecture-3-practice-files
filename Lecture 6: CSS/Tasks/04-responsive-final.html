@@ -4,111 +4,138 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Final Responsive Layout</title>
+    <title>Responsive Layout Practice</title>
     <style>
+        /* 
+            Task:
+            1. Use Flexbox for main content layout.
+            2. Allow wrapping so items flow nicely on smaller screens.
+            3. Style nav links with hover and focus effects.
+            4. Add pseudo-elements (::before) on nav links for decoration.
+            5. Ensure responsive navigation and content stacking on narrow screens.
+            6. Style header and sections with padding, colors, and shadows.
+        */
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
+            background-color: #ecf0f1;
+            color: #34495e;
         }
 
-        header,
-        footer {
-            background-color: #34495e;
+        header {
+            background-color: #2c3e50;
             color: white;
+            padding: 1rem 2rem;
             text-align: center;
-            padding: 20px 0;
         }
 
         nav ul {
+            list-style: none;
             display: flex;
             justify-content: center;
-            list-style: none;
+            gap: 1rem;
             padding: 0;
-            margin: 0;
-            background-color: #2c3e50;
-        }
-
-        nav ul li {
-            margin: 0 15px;
+            margin: 0.5rem 0;
+            background-color: #34495e;
         }
 
         nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
             display: block;
+            padding: 0.75rem 1.5rem;
+            color: #ecf0f1;
+            text-decoration: none;
+            position: relative;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover,
+        nav ul li a:focus {
+            background-color: #2980b9;
+            color: #ecf0f1;
+            outline: none;
+        }
+
+        nav ul li a::before {
+            content: "➤ ";
+            color: #ecf0f1;
+            opacity: 0;
+            position: absolute;
+            left: 0.5rem;
+            transition: opacity 0.3s ease;
+        }
+
+        nav ul li a:hover::before,
+        nav ul li a:focus::before {
+            opacity: 1;
         }
 
         main {
-            display: grid;
-            grid-template-columns: 1fr 3fr;
+            display: flex;
+            flex-wrap: wrap;
             gap: 20px;
-            padding: 20px;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        aside {
-            background-color: #ecf0f1;
-            padding: 15px;
+        main aside,
+        main article {
+            background-color: white;
+            flex: 1 1 300px;
+            padding: 1.5rem;
             border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
         }
 
-        article {
-            background-color: #bdc3c7;
-            padding: 15px;
-            border-radius: 8px;
+        main aside h2,
+        main article h2 {
+            margin-top: 0;
+            color: #2c3e50;
         }
 
-        @media (max-width: 768px) {
-            main {
-                grid-template-columns: 1fr;
-            }
-
-            nav ul {
-                flex-direction: column;
-            }
-
-            nav ul li {
-                margin: 5px 0;
-            }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #2c3e50;
+            color: white;
         }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Responsive Site Example</h1>
+        <h1>Responsive Flexbox Layout</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
     <main>
         <aside>
             <h2>Sidebar</h2>
-            <p>Links and info here.</p>
+            <p>This is a sidebar area with some additional information.</p>
         </aside>
         <article>
             <h2>Main Content</h2>
-            <p>This layout adapts on smaller screens.</p>
-            <button>Click Me</button>
+            <p>
+                This section contains the main content of the page. Use Flexbox to
+                arrange this and the sidebar responsively.
+            </p>
+            <p>
+                On wider screens, they should appear side by side; on smaller screens,
+                stacked vertically.
+            </p>
         </article>
     </main>
     <footer>
-        <p>&copy; 2025 Responsive Site</p>
+        <p>&copy; 2025 Your Company</p>
     </footer>
-
-    <!--
-        Task:
-        1. Enhance nav links hover and active states.
-        2. Add pseudo-classes like :hover and :focus for buttons and links.
-        3. Improve responsiveness by tweaking media query breakpoints.
-        4. Add pseudo-elements (::before, ::after) for decoration.
-        5. Adjust spacing, font sizes, and colors for better look and feel.
-    -->
 </body>
 
 </html>
