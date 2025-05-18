@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Nested Layout</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+
+        .outer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+
+        .main {
+            background-color: #c2e9fb;
+            padding: 15px;
+        }
+
+        .main .inner-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .box {
+            background-color: #fff4e6;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .sidebar {
+            background-color: #d3f8e2;
+            padding: 15px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Grid Nested Layout</h1>
+    <div class="outer-grid">
+        <div class="main">
+            <h2>Main Content</h2>
+            <div class="inner-grid">
+                <div class="box">Box A</div>
+                <div class="box">Box B</div>
+                <div class="box">Box C</div>
+                <div class="box">Box D</div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <h2>Sidebar</h2>
+            <p>Some side content here.</p>
+        </div>
+    </div>
+
+    <!--
+        Step 1: Use nested grid inside .main to organize .box elements.
+        Step 2: Adjust the layout for the .inner-grid to 1 column on small screens.
+        Step 3: Try having one .box span both columns.
+        Step 4: Add a footer below the outer-grid.
+    -->
+</body>
+
+</html>
