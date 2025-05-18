@@ -48,10 +48,12 @@ header a:hover {
 .cards {
     margin: 20px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
 }
 
 .card {
-    display: inline-block;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 3px 4px -1px #ddd;

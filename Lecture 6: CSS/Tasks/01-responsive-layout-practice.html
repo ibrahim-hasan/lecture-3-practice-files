@@ -23,6 +23,26 @@
             flex: 1;
             text-align: center;
         }
+
+        @media (max-width: 1024px) {
+            .container {
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 1px;
+            }
+
+            .box {
+                background-color: darkslategray;
+                color: #fff;
+                font-size: 18px;
+                font-weight: 600;
+            }
+        }
     </style>
 </head>
 

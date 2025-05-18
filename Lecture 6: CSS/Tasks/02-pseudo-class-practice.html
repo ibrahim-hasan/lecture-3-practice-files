@@ -25,14 +25,38 @@
             color: white;
             cursor: pointer;
             border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2679b1;
+            transform: translateY(2px);
+        }
+
+        button:active {
+            background-color: #0c4164;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        p:nth-child(even) {
+            color: green;
+        }
+
+        p:nth-child(odd) {
+            color: red;
         }
     </style>
 </head>
 
 <body>
     <h1>Pseudo-Class Practice</h1>
-    <p><a href="#">Hover over this link</a></p>
-    <p><button>Focus on this button (use Tab key)</button></p>
+    <div>
+        <p>This is a link, hover on it to see it change: <a href="#">Hover over this link</a></p>
+        <p>This is the button: <button>Focus on this button (use Tab key)</button></p>
+    </div>
 
     <!--
         Task:
