@@ -102,6 +102,33 @@
             background-color: #2c3e50;
             color: white;
         }
+
+        @media (max-width: 1024px) {
+            main {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                row-gap: 3px;
+                background-color: transparent;
+            }
+
+            nav ul li {
+                background-color: #34495e;
+            }
+        }
+
+        .whatsapp-contact {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+        .whatsapp-contact img {
+            width: 50px;
+        }
     </style>
 </head>
 
@@ -137,6 +164,9 @@
     <footer>
         <p>&copy; 2025 Your Company</p>
     </footer>
+    <a class="whatsapp-contact" href="https://whatsapp.com" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png" alt="Reach us on Whatsapp">
+    </a>
 </body>
 
 </html>
