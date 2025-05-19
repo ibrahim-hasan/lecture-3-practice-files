@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Columns and Rows</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 5fr 1fr 1fr 1fr;
+            grid-template-rows: 100px auto;
+            gap: 10px;
+        }
+
+        .item {
+            background: #fab1a0;
+            padding: 20px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .item1 {
+            grid-column: 1 / span 1;
+        }
+
+        .item3 {
+            grid-row: 2 / span 2;
+        }
+
+        .item5 {
+            grid-column: 4 / 2;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Grid Columns and Rows</h1>
+    <div class="container">
+        <div class="item item1">Header</div>
+        <div class="item item2">Menu</div>
+        <div class="item item3">Main</div>
+        <div class="item">Footer</div>
+    </div>
+
+    <!--
+        Step 1: Experiment with grid-template-columns (%, fr, px).
+        Step 2: Try repeat() and auto.
+        Step 3: Adjust row heights and test how auto behaves.
+        Step 4: Use media queries to reduce columns to 2 or 1.
+    -->
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Layout Practice</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            margin: 0;
+        }
+
+        main, footer, aside {
+            background-color: rgb(206, 206, 206);
+            border: 1px solid #333;
+        }
+
+        header {
+            grid-column: 1 / span 10;
+            margin-right: 40px;
+            margin-left: 40px;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav {
+            grid-column: 1 / span 10;
+        }
+
+        nav ul {
+            background-color: rgb(99, 45, 45);
+            display: flex;
+            column-gap: 10px;
+            justify-content: center;
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            padding: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        main {
+            grid-column: 1 / span 8;
+        }
+
+        aside {
+            grid-column: 9 / span 2;
+        }
+
+        footer {
+            grid-column-start: 1;
+            grid-column-end: span 10;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER SECTION -->
+    <header>
+        <div class="container">
+            <h1>My Awesome Website</h1>
+            <p class="tagline">Where awesomeness meets simplicity ✨</p>
+        </div>
+    </header>
+
+    <!-- NAVIGATION BAR -->
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT SECTION -->
+    <main>
+        <section class="hero">
+            <h2>Welcome to the Future of Web Design</h2>
+            <p>This is a beautiful, responsive, and accessible website template.</p>
+            <a href="#get-started" class="btn-primary">Get Started</a>
+        </section>
+
+        <section class="features">
+            <article class="feature-box">
+                <h3>⚡ Fast</h3>
+                <p>Blazing fast load times to keep your visitors happy.</p>
+            </article>
+            <article class="feature-box">
+                <h3>📱 Responsive</h3>
+                <p>Looks great on every screen size. Even your smart fridge.</p>
+            </article>
+            <article class="feature-box">
+                <h3>🛡️ Secure</h3>
+                <p>Built with best practices to keep your data safe and cozy.</p>
+            </article>
+        </section>
+    </main>
+
+    <!-- SIDEBAR (Optional) -->
+    <aside class="sidebar">
+        <h3>Latest News</h3>
+        <ul>
+            <li><a href="#">We just launched v2.0!</a></li>
+            <li><a href="#">Meet our new team member, Muffin the cat 🐱</a></li>
+            <li><a href="#">Tips for optimizing your HTML layout</a></li>
+        </ul>
+    </aside>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 My Awesome Website. Built with 💖 and HTML.</p>
+            <ul class="social-links">
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">GitHub</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Auto Placement</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+
+        .auto-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .auto-grid div {
+            background: #fbc4ab;
+            padding: 30px;
+            border-radius: 6px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Grid Auto Placement</h1>
+    <div class="auto-grid">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+        <div>Item 5</div>
+        <div>Item 6</div>
+        <div>Item 7</div>
+    </div>
+
+    <!--
+        Step 1: Use auto-fill or auto-fit to make items flow responsively.
+        Step 2: Adjust minmax() values to see how sizing behaves.
+        Step 3: Use media query to reduce gap on smaller screens.
+        Step 4: Try limiting the max-width of the grid.
+    -->
+</body>
+
+</html>

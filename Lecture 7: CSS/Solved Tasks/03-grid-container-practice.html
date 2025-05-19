@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Container Properties</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-items: start;
+            align-items: end;
+            height: 300px;
+            border: 2px dashed #ccc;
+        }
+
+        .item {
+            background: #74b9ff;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .itemB {
+            justify-self: center;
+            align-self: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Grid Container Practice</h1>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item itemB">B</div>
+        <div class="item">C</div>
+    </div>
+
+    <!--
+        Step 1: Observe alignment using justify-items and align-items.
+        Step 2: Change gap to 5px, 40px, etc.
+        Step 3: Add grid-auto-flow: column; and observe the flow direction.
+        Step 4: Try removing justify/align items and see default.
+    -->
+</body>
+
+</html>
