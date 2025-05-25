@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01 - Arrays Practice</title>
+</head>
+<body>
+    <h2>Arrays Practice</h2>
+    <ul id="namesList"></ul>
+
+    <script>
+        // Initial array of names
+        const names = ['Alice', 'Bob', 'Charlie', 'David'];
+
+        // TODO:
+        // Step 1: Use a loop to display each name in the namesList <ul>.
+        // Step 2: Add two more names to the array.
+        // Step 3: Remove the second name from the array.
+        // Step 4: Sort the array alphabetically and display it again.
+
+        // Hint:
+        // - Use for loop or forEach() to iterate over the array.
+        // - Use push(), splice(), and sort() array methods.
+        names.push('Ibrahim', 'Isam', 'Ghufran');
+        console.log(names);
+
+        names.splice(1, 1);
+        console.log(names);
+
+        names.sort();
+        console.log(names);
+    </script>
+</body>
+</html>

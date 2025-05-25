@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02 - Objects Practice</title>
+</head>
+<body>
+    <h2>Objects Practice</h2>
+    <div id="studentInfo"></div>
+
+    <script>
+        // Initial object representing a student
+        const student = {
+            name: 'Ibrahim Hasan',
+            age: 22,
+            major: 'Computer Science',
+        };
+
+        // TODO:
+        // Step 1: Display the student's details on the page.
+        // Step 2: Add a new property 'graduationYear' to the student object.
+        // Step 3: Update the student's major to 'Software Engineering'.
+        // Step 4: Delete the age property and display the updated object.
+
+        // Hint:
+        // - Access object properties with dot notation (student.name) or bracket notation (student['age']).
+        // - Use delete keyword to remove a property.
+        console.log(student);
+
+        student.graduationYear = 2015;
+        console.log(student);
+
+        student.major = "Software Engineering";
+        console.log(student);
+
+        delete student.age;
+        console.log(student);
+    </script>
+</body>
+</html>
