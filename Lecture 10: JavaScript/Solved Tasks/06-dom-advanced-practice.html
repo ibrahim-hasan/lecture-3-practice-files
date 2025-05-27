@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced DOM Manipulation</title>
+    <style>
+        .hidden { display: none; }
+        .highlight { background-color: yellow; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h2>Advanced DOM Practice</h2>
+    <img id="image" src="front-view.webp" alt="Placeholder Image" width="200">
+    <button id="changeImage">Change Image</button>
+    <p id="info" class="paragraph">Hover here for details.</p>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <script>
+        // Step 1: Change the image source on button click.
+
+        // Step 2: Toggle 'highlight' class on paragraph when hovered.
+
+        // Step 3: Log parent and siblings of the first list item in console.
+        const img = document.getElementById("image");
+        const changeImageBtn = document.querySelector('#changeImage');
+        const p = document.querySelector('p');
+        const li = document.querySelector('li');
+        console.log(li);
+
+        changeImageBtn.addEventListener("click", function () {
+            img.src = 'side-view.webp';
+        });
+        
+        p.addEventListener("mouseover", function() {
+            p.classList.add("highlight");
+        });
+        
+        p.addEventListener("mouseleave", function() {
+            p.classList.remove("highlight");
+        });
+
+        const parent = li.parentElement;
+        console.log(parent);
+        const previousSibling = li.previousElementSibling;
+        console.log(previousSibling);
+        const nextSibling = li.nextElementSibling;
+        console.log(nextSibling);
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>02 - Form Submit & Validation</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .error {
+            border: 1px solid red;
+        }
+
+        .success {
+            color: green;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Form Validation</h2>
+    <form id="userForm">
+        <label>Name: <input type="text" id="name" /></label><br />
+        <label>Email: <input type="email" id="email" /></label><br />
+        <label>Age: <input type="number" id="age" /></label><br />
+        <button type="submit">Submit</button>
+    </form>
+    <p class="success" id="messageBox"></p>
+
+    <script>
+        // Step 1: Prevent default form submission.
+        // Step 2: Check that all fields are filled.
+        // Step 3: Show a message or add error class if invalid.
+    </script>
+</body>
+
+</html>

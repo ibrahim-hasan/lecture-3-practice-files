@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>For Loop - Products</title>
+</head>
+<body>
+    <h1>Product List</h1>
+    <ul id="product-list"></ul>
+    <script>
+        const products = ['Laptop', 'Phone', 'Tablet', 'Monitor'];
+        // Step 1: Use a 'for' loop to iterate through products array.
+        // Step 2: Create list items and append them to the ul with id 'product-list'.
+
+        const productList = document.getElementById("product-list");
+        console.log(productList)
+
+        for (let i = 0; i < products.length; i++) {
+            let li = document.createElement('li');
+            li.innerText = products[i];
+            productList.appendChild(li);
+        }
+    </script>
+</body>
+</html>

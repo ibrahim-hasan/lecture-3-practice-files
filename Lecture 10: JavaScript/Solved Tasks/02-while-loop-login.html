@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>While Loop - Login Attempts</title>
+</head>
+<body>
+    <h1>Login Simulation</h1>
+    <p id="status"></p>
+
+    <script>
+        const correctPassword = "12345";
+        let attempts = 0;
+        const maxAttempts = 3;
+        let loggedIn = false;
+
+        // Step 1: Simulate a login attempt with a 'while' loop.
+        // Step 2: Alert user after each failed attempt.
+        // Step 3: Stop attempts after reaching maxAttempts.
+        let input = "";
+        const status = document.getElementById("status");
+        
+        while (input !== correctPassword && !loggedIn) {
+            input = prompt("Enter your password:");
+            attempts++;
+
+            if (input === correctPassword) {
+                loggedIn = true;
+            }
+
+            if (attempts < maxAttempts) {
+                alert(`Number of attempts: ${attempts}`);
+            } else {
+                alert('You exceeded the number of attempts allowed.');
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>04 - Confirmation Message</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        .card {
+            margin-top: 15px;
+            padding: 15px;
+            background: #e6ffee;
+            border: 1px solid #b2dfdb;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Confirmation Message Demo</h2>
+    <form id="confirmForm">
+        <label>Name: <input type="text" id="fullName" /></label><br />
+        <label>Message:<br /><textarea id="message" rows="4" cols="30"></textarea></label><br />
+        <button type="submit">Send</button>
+    </form>
+
+    <div class="card" id="confirmationBox"></div>
+
+    <script>
+        // Step 1: Prevent default submission.
+        // Step 2: Read the values and insert a custom message into #confirmationBox using template literals.
+        // Step 3: Clear the form after confirmation.
+    </script>
+</body>
+
+</html>

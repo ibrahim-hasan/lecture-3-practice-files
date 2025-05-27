@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>03 - Checkbox and Radio</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        .output {
+            margin-top: 10px;
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Checkbox and Radio Demo</h2>
+    <form id="optionsForm">
+        <h4>Which fruits do you like?</h4>
+        <label><input type="checkbox" name="fruit" value="Apple"> Apple</label><br />
+        <label><input type="checkbox" name="fruit" value="Banana"> Banana</label><br />
+        <label><input type="checkbox" name="fruit" value="Mango"> Mango</label><br />
+
+        <h4>Choose your gender:</h4>
+        <label><input type="radio" name="gender" value="Male"> Male</label>
+        <label><input type="radio" name="gender" value="Female"> Female</label><br />
+
+        <button type="button" id="submitBtn">Submit</button>
+    </form>
+    <div class="output" id="resultBox"></div>
+
+    <script>
+        // Step 1: On button click, collect all checked checkboxes into an array.
+        // Step 2: Get selected radio value.
+        // Step 3: Display both sets of values in #resultBox.
+    </script>
+</body>
+
+</html>
