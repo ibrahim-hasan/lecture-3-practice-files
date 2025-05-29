@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>02 - Form Submit & Validation</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .error {
+            border: 1px solid red;
+        }
+
+        .success {
+            color: green;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Form Validation</h2>
+    <form id="user-form">
+        <label>Name: <input type="text" id="name" /></label><br />
+        <label>Email: <input type="email" id="email" /></label><br />
+        <label>Age: <input type="number" id="age" /></label><br />
+        <button type="submit">Submit</button>
+    </form>
+    <p class="success" id="message-box"></p>
+
+    <script>
+        // Step 1: Prevent default form submission.
+        // Step 2: Check that all fields are filled.
+        // Step 3: Show a message or add error class if invalid.
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+        const ageInput = document.getElementById("age");
+        const userForm = document.getElementById("user-form");
+        const messageBox = document.getElementById("message-box");
+        let isValid = true;
+        
+        userForm.addEventListener("submit", e => {
+            e.preventDefault();
+            
+            if (!nameInput.value.trim().length || !emailInput.value.trim().length || !ageInput.value.trim().length) {
+                isValid = false;
+            } else 
+                isValid = true;
+
+            if (isValid) {
+                messageBox.innerText = "Success! You filled all the fields.";
+                messageBox.classList.remove("error");
+                messageBox.classList.add("success");
+                
+            } else {
+                messageBox.innerText = "Whoops! Some fields are not filles. Check again.";
+                messageBox.classList.remove("success");
+                messageBox.classList.add("error");
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>01 - Basic Form Input</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        .output {
+            margin-top: 15px;
+            background: #f0f8ff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Basic Form Input Display</h2>
+    <label>Name: <input type="text" id="name-input" /></label>
+    <button id="show-btn">Show Name</button>
+    <div class="output" id="output-box"></div>
+
+    <script>
+        // Step 1: When button is clicked, get value from #name-input.
+        // Step 2: Display the name inside #output-box.
+        const nameInput = document.getElementById("name-input");
+        const showBtn = document.getElementById("show-btn");
+        const outputBox = document.getElementById("output-box");
+
+        showBtn.addEventListener("click", e => {
+            outputBox.innerText = nameInput.value;
+        });
+    </script>
+</body>
+
+</html>

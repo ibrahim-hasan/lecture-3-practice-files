@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>03 - Checkbox and Radio</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        .output {
+            margin-top: 10px;
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Checkbox and Radio Demo</h2>
+    <form id="options-form">
+        <h4>Which fruits do you like?</h4>
+        <label><input type="checkbox" name="fruit" value="Apple"> Apple</label><br />
+        <label><input type="checkbox" name="fruit" value="Banana" checked> Banana</label><br />
+        <label><input type="checkbox" name="fruit" value="Mango"> Mango</label><br />
+
+        <h4>Choose your gender:</h4>
+        <label><input type="radio" name="gender" value="Male"> Male</label>
+        <label><input type="radio" name="gender" value="Female"> Female</label><br />
+
+        <button type="button" id="submit-btn">Submit</button>
+    </form>
+    <div class="output" id="result-box"></div>
+
+    <script>
+        // Step 1: On button click, collect all checked checkboxes into an array.
+        // Step 2: Get selected radio value.
+        // Step 3: Display both sets of values in #result-box.
+        let selectedFruits = [];
+        const btn = document.getElementById("submit-btn");
+
+        btn.addEventListener("click", e => {
+            selectedFruits = Array.from(document.querySelectorAll('input[name="fruit"]:checked')).map(function(fruit) {
+                return fruit.value;
+            });
+            console.log(selectedFruits);
+        });
+
+    </script>
+</body>
+
+</html>
